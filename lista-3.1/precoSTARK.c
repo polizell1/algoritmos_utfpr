@@ -21,9 +21,9 @@ int main()
 
 compras()
 {
-    int parar = 0;
+    int parar = 1;
 
-    while (parar == 0)
+    while (parar == 1)
     {
         int cod = 0, quant = 0;
         float preco = 0, valor = 0;
@@ -51,6 +51,7 @@ compras()
             
             default:
                 printf("Codigo invalido");
+                compras();
                 break;
         }
 
@@ -62,10 +63,14 @@ compras()
 
         printf("\nO valor a se pagar eh de %.2fU$", valor);
 
-        printf("\n Quer continuar(1/0): ")
-        scanf("")
-        if 
+        printf("\n 0-> Nao \n 1->Sim\n");
+        printf("\n Quer continuar(1/0): ");
+        scanf("%d", &parar);
 
+        if (parar == 0)
+        {
+            break;
+        }
 
     }
 }
